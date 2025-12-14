@@ -1,27 +1,25 @@
 import './App.css'
-import Miembros from './components/Familia'
+import Zapatosdescripcion from './components/Familia'
 
 function App() {
-  const datosMiembros = {
-        nombre: "Carlos",
-        apellido: "Perez",
-        edad: 45,
-        cedula: "123456789",
-        telefonos: ["555-1234", "555-5678"],
-        familia: ["Ana", "Luis", "Sofia"],
-    };
+  const Zapatosinfo = {
+    marca: "Nike",
+    talla: 45,
+    color: "Azul",
+    precio: 145,
+    trenzas: "",
+  }
   return (
-    <div className="App">
-      <Miembros 
-        nombre={datosMiembros.nombre}
-        apellido={datosMiembros.apellido}
-        edad={datosMiembros.edad}
-        cedula={datosMiembros.cedula}
-        telefonos={datosMiembros.telefonos}
-        familia={datosMiembros.familia}
-      />
-    </div>
-  )
+  <Zapatosdescripcion
+    marca={Zapatosinfo.marca}
+    talla={Zapatosinfo.talla}
+    color={Zapatosinfo.color}
+    precio={Zapatosinfo.precio}
+    trenzas={Zapatosinfo.trenzas}
+  />
+);
 }
+
+
 
 export default App;

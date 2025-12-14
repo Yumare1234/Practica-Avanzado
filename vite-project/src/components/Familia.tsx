@@ -1,30 +1,30 @@
-type Persona = {
-nombre: string;
-apellido: string;
-edad: number;
-cedula: string; 
-telefonos?: string[];
-familia: string[];
+type Zapatos = {
+    marca: string;
+    talla: number;
+    color: string;
+    precio: number;
+    trenzas?: string;
 };
 
-function Miembros ({
-nombre,
-apellido,
-edad,
-cedula,
-telefonos,
-familia,
-}: Persona) {
-return(
-<div>
-<h1> {nombre} </h1>
-<p> Apellido: {apellido} </p>
-<p> Edad: {edad} </p>
-<p> Cedula: {cedula} </p>
-<p> telefonos: {telefonos} </p>
-<p> familia: {familia} </p>
-</div>
-);
+function Zapatosdescripcion({ 
+    marca,
+    talla,
+    color,
+    precio,
+    trenzas,
+}: Zapatos) {
+    return(
+        <div>
+            <h2>Descripción de los Zapatos</h2>
+            <ul>
+                <li>Marca: {marca}</li>
+                <li>Talla: {talla}</li>
+                <li>Color: {color}</li>
+                <li>Precio: ${precio}</li>
+                {trenzas && <li>Trenzas: {trenzas}</li>}
+            </ul>
+        </div>
+    )
 }
-    
-export default Miembros;
+
+export default Zapatosdescripcion; 
