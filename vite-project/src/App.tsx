@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Miembros from './components/Familia'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const datosMiembros = {
+        nombre: "Carlos",
+        apellido: "Perez",
+        edad: 45,
+        cedula: "123456789",
+        telefonos: ["555-1234", "555-5678"],
+        familia: ["Ana", "Luis", "Sofia"],
+    };
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className='bg-amber-200'>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <Miembros 
+        nombre={datosMiembros.nombre}
+        apellido={datosMiembros.apellido}
+        edad={datosMiembros.edad}
+        cedula={datosMiembros.cedula}
+        telefonos={datosMiembros.telefonos}
+        familia={datosMiembros.familia}
+      />
+    </div>
   )
 }
 
-export default App
+export default App;
