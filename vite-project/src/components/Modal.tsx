@@ -16,9 +16,14 @@ const Modal = ({ isOpen, onClose, title}: ModalProps) => {
     <div className="bg-gray-500 rounded-xl shadow-2xl w-full max-w-md overflow-hidden border-2 border-purple-900">
       <div className="flex justify-between items-center p-4 bg-purple-900 text-white"></div>
           <h3 className="text-xl font-bold">{title}</h3>
-          <button onClick={onClose} className="rounded-2xl bg-purple-600 "
+          <button 
+            onClick={onClose}
+            className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-800">
+            Cerrar
+            </button>
       </div>
     </div>
+
   );
 };
 
