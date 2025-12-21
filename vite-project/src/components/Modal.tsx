@@ -1,15 +1,25 @@
 import React from "react"
 import { useState } from "react"
 
-export default function Modal() {
-    return (
-        <>
-        <button className="bg-cyan-500 py-2 px-6 rounded-sm text-white font-bold m-5"> 
-            Abrir Modal 
-        </button>
-       <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
-         <div className=" bg-white p-5 rounded flex flex-col justify-center items-center gap-5"></div>
-       </div>
-    </>
-   );
+interface ModalProps {
+  isOpen: Boolean;
+  onClose: () => void;
+  title: string;
 }
+
+const Modal = ({ isOpen, onClose, title}: ModalProps) => {
+  if (!isOpen) return null;
+  
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 backdrop-blur-sm p-4"> 
+    <div className="bg-gray-500 rounded-xl shadow-2xl w-full max-w-md overflow-hidden border-2 border-purple-900">
+      <div className="flex justify-between items-center p-4 bg-purple-900 text-white"></div>
+          <h3 className="text-xl font-bold">{title}</h3>
+          <button onClick={onClose} className="rounded-2xl bg-purple-600 "
+      </div>
+    </div>
+  );
+};
+
+export { Modal };

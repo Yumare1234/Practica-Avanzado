@@ -1,12 +1,18 @@
 import './App.css'
-import Modal from './components/Modal';
+import Familia from './components/Familia';
 
 function App() {
 
-  
   return (
     <>
-    <Modal />
+      <Familia
+      nombre="Gabriel"
+      apellido="Yumare"
+      edad={17}
+      cedula="32.560.453"
+
+
+    />
     </> 
   )
 }
